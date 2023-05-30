@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pr8</string>
+    <string name="add_user">Add user to a database</string>
+    <string name="hint_word1">UID</string>
+    <string name="hint_word2">First name</string>
+    <string name="hint_word3">Last name</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Word not saved because it is empty.</string>
+</resources>
