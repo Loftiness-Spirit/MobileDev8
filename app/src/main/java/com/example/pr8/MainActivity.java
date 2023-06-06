@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i("app-specific", getFilesDir().toString());
         Log.i("external", getExternalFilesDir(null).toString());
-        File file1 = new File(getFilesDir(),"first.txt");
-        File file2 = new File(getExternalFilesDir(null), "first.txt");
-        String text = "Prompt text";
-
+        File file1 = new File(getFilesDir(),"internal.txt");
+        File file2 = new File(getExternalFilesDir(null), "external.txt");
+        String text = "internal";
+        String text1 = "external";
         try (FileOutputStream fos = openFileOutput(file1.getName(),MODE_PRIVATE)) {
             fos.write(text.getBytes());
             if(file1.exists()){
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             Log.e("app-specific", ex.toString());
         }
         try (FileOutputStream fos = new FileOutputStream(file2)) {
-            fos.write(text.getBytes());
+            fos.write(text1.getBytes());
         } catch (Exception ex) {
             Log.e("external", ex.toString());
         }
@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
         MyDatabase db = Room.databaseBuilder(getApplicationContext(),
                 MyDatabase.class, "users data").build();
         UserDao userDao = db.userDao();
-        setContentView(R.layout.activity_main);
     }
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
