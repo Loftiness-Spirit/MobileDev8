@@ -5,5 +5,5 @@
     <string name="hint_word2">First name</string>
     <string name="hint_word3">Last name</string>
     <string name="button_save">Save</string>
-    <string name="empty_not_saved">Word not saved because it is empty.</string>
+    <string name="empty_not_saved">User not saved because it is empty.</string>
 </resources>
